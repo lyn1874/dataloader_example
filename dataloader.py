@@ -130,7 +130,7 @@ def test(show=False):
             # -------------------From here is the training updating process --------------#
             # optimizer.zero_grad()
             # pred = model(_img)  # [batch_size, imh * imw, num_classes]
-            # loss = nn.CrossEntropy(reduction='sum')(pred, _label)
+            # loss = nn.CrossEntropy(reduction='sum')(pred, _label).div(batch_size)
             # loss.backward()
             # optimizer.step()
             # ----------------------------------------------------------------------------#
